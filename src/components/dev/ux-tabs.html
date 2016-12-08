@@ -1,0 +1,9 @@
+<template>
+  <require from="./ux-tabs.css"></require>
+  <div class="ux-tab-bar" ref="tabBar">
+    <a click.delegate="setActive(tab)" class="ux-tab ${tab.active ? 'active' : ''}" repeat.for="tab of tabs">${tab.uxTabLabel}</a>
+  </div>
+  <div class="ux-tab-panel">
+    <slot></slot>
+  </div>
+</template>
